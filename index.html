@@ -194,6 +194,147 @@
             box-shadow: 0 0 8px 2px rgba(255, 102, 0, 0.6); /* Menambahkan efek outline saat fokus */
         }
 
+        /* Responsif untuk layar kecil */
+        @media (max-width: 768px) {
+            /* Header */
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+        
+            header img {
+                max-width: 150px;
+                margin-bottom: 10px;
+            }
+        
+            nav ul {
+                padding: 0;
+                margin-top: 10px;
+            }
+        
+            nav ul li {
+                display: block;
+                margin-bottom: 10px;
+            }
+        
+            nav ul li a {
+                font-size: 1.1rem;
+            }
+        
+            /* Hero Section */
+            .hero {
+                padding: 50px 20px;
+            }
+        
+            .hero h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+        
+            .hero p {
+                font-size: 1rem;
+            }
+        
+            /* Slideshow */
+            .slideshow-container {
+                max-width: 100%;
+            }
+        
+            .slide-images {
+                width: 100%;
+                height: auto;
+                max-width: 400px; /* Gambar jadi lebih kecil di perangkat kecil */
+            }
+        
+            /* Product Section */
+            .product-section {
+                padding: 30px 10px;
+            }
+        
+            .product-cards {
+                display: block;
+                padding: 10px;
+            }
+        
+            .product-card {
+                width: 100%; /* Full width untuk setiap card */
+                margin: 10px 0;
+            }
+        
+            .product-card img {
+                max-width: 80%;
+                height: auto;
+            }
+        
+            .product-card h3 {
+                font-size: 1.5rem;
+            }
+        
+            .product-card p {
+                font-size: 1rem;
+            }
+        
+            /* Footer */
+            footer {
+                padding: 20px 10px;
+            }
+        
+            footer div {
+                text-align: center;
+            }
+        
+            footer p {
+                font-size: 1rem;
+            }
+        
+            footer a {
+                color: #fff;
+                text-decoration: none;
+            }
+        
+            /* Button */
+            button {
+                padding: 12px 25px;
+                font-size: 1.1rem;
+            }
+        
+            /* Additional tweaks for better usability */
+            .product-card a {
+                display: block;
+                margin-top: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Hero Section */
+            .hero h1 {
+                font-size: 2rem;
+            }
+        
+            .hero p {
+                font-size: 0.9rem;
+            }
+        
+            /* Product Section */
+            .product-card h3 {
+                font-size: 1.3rem;
+            }
+        
+            .product-card p {
+                font-size: 0.9rem;
+            }
+        
+            /* Button */
+            button {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        
+            .product-card img {
+                max-width: 90%;
+            }
+        }
 
     </style>
 </head>
