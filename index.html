@@ -357,6 +357,33 @@
             nav ul li a {
                 font-size: 1.2rem;
             }
+
+            /* Product Section */
+            .product-cards {
+                display: grid; /* Menggunakan grid layout untuk lebih mudah mengatur kolom */
+                grid-template-columns: repeat(3, 1fr); /* Tiga kolom di layar besar */
+                gap: 20px; /* Jarak antar produk */
+            }
+            
+            /* Responsif untuk layar kecil */
+            @media (max-width: 768px) {
+                .product-cards {
+                    grid-template-columns: repeat(2, 1fr); /* Dua kolom di layar kecil */
+                }
+            
+                .product-card {
+                    width: auto; /* Menghilangkan lebar tetap */
+                    margin: 10px 0; /* Memberikan sedikit jarak antara produk */
+                }
+            }
+            
+            /* Responsif untuk layar sangat kecil (misalnya ponsel kecil) */
+            @media (max-width: 480px) {
+                .product-cards {
+                    grid-template-columns: 1fr; /* Satu kolom pada layar lebih kecil */
+                }
+            }
+
             
         }
 
