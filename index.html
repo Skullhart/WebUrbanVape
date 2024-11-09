@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Produk Vape Terbaik di Pasaran">
+    <title>VapeStore | Showcase Produk Vape</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        header img {
+            max-width: 200px;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('head.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Slide Show Section */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .slide-images {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .product-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .product-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            font-size: 1.8rem;
+            margin-top: 15px;
+        }
+
+        .product-card p {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Slide Show Section */
+        .slideshow-container {
+            position: relative;
+            max-width: 80%; /* Mengurangi lebar gambar menjadi 80% dari container */
+            margin: auto;
+            overflow: hidden; /* Menghindari gambar keluar dari container */
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .slide-images {
+            width: 100%; /* Lebar gambar mengikuti container */
+            max-width: 600px; /* Maksimal lebar gambar 600px */
+            height: auto; /* Menjaga rasio aspek gambar */
+            border-radius: 8px;
+        }
+
+        /* Responsif untuk layar lebih kecil */
+        @media (max-width: 768px) {
+            .slideshow-container {
+                max-width: 100%; /* Menggunakan lebar penuh pada layar kecil */
+            }
+
+            .slide-images {
+                max-width: 100%; /* Gambar akan menggunakan lebar penuh container pada layar kecil */
+            }
+        }
+        /* Tombol Beli Sekarang */
+        button {
+            background-color: lightseagreen; /* Warna oranye yang menarik perhatian */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Animasi transisi saat hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek 3D */
+            text-transform: uppercase; /* Membuat teks tombol semua kapital */
+        }
+
+        /* Efek hover */
+        button:hover {
+            background-color: #ff4500; /* Warna sedikit lebih gelap saat hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Bayangan lebih besar saat hover */
+            transform: translateY(-3px); /* Sedikit mengangkat tombol */
+        }
+
+        /* Efek focus saat tombol dipilih */
+        button:focus {
+            outline: none; /* Menghilangkan outline default */
+            box-shadow: 0 0 8px 2px rgba(255, 102, 0, 0.6); /* Menambahkan efek outline saat fokus */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Logo on the left -->
+        <div>
+            <a href="https://www.instagram.com/urban_vape/"><img src="logo.jpg" alt="Logo"></a>
+        </div>
+
+        <!-- Navigation in the center -->
+        <nav>
+            <h1>Urban Vape</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <h1>Selamat Datang di <br>
+            Urban Vape Store</h1>
+        <p>Temukan Produk Vape Terbaik untuk Kenikmatan Maksimal Anda!</p>
+    
+        <!-- Slide Show Gallery -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="produk/p (1).jpg" class="slide-images" alt="Slide 1">
+            </div>
+            <div class="mySlides fade">
+                <img src="produk/p (6).jpg" class="slide-images" alt="Slide 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="produk/16.jpg" class="slide-images" alt="Slide 3">
+            </div>
+            <div class="mySlides fade">
+                <img src="produk/p (5).jpg" class="slide-images" alt="Slide 3">
+            </div>
+            <div class="mySlides fade">
+                <img src="produk/p (4).jpg" class="slide-images" alt="Slide 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section class="product-section" id="products">
+        <h2>Jenis Produk Kami</h2>
+        <div class="product-cards">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <h3>Device</h3>
+                <img src="produk1.png" alt="Vape 1">
+                <h3>Ursa Nano Pod Dragon Ball Edition</h3>
+                <p>Nikmati pengalaman vaping yang luar biasa dengan perangkat vaping portabel yang mengusung desain eksklusif bertema Dragon Ball! Dengan ukuran kompak dan mudah dibawa.</p>
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <h3>Liquid</h3>
+                <img src="produk2.png" alt="Vape 2">
+                <h3>Oatdrips Iced Oat Freebase Nic 6</h3>
+                <p>Bawa sensasi baru dalam vaping dengan e-liquid yang menggabungkan rasa oat yang creamy dan segarnya sensasi mint.</p>
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <!-- Product Card -->
+            <div class="product-card">
+                <h3>Cartridge</h3>
+                <img src="produk3.png" alt="Vape 3">
+                <h3>Foom Pod X Cartridge</h3>
+                <p>Solusi sempurna bagi pengguna yang ingin mengganti cartridge vape dengan kualitas premium. Dengan teknologi pod yang canggih dan desain yang praktis.</p>
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="product-section" id="products">
+        <h2>Produk Lainnya</h2>
+        <div class="product-cards">
+
+            <!-- Product Card x -->
+            <div class="product-card">
+                <img src="produk/p (1).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (2).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (3).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (4).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (5).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (6).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (7).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (8).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (9).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (10).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (11).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (12).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (13).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (14).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+            <div class="product-card">
+                <img src="produk/p (15).jpg" alt="Vape 3">
+                <a href="https://www.instagram.com/urban_vape/"><button>Beli Sekarang</button></a>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div>
+            <div>
+                <a href="https://www.instagram.com/urban_vape?igsh=MXU2MXc4dXFpbjl0ZA=="><img src="qrig.jpg" width="200" alt="QR Code"></a>
+            </div>
+        </div>
+        <p>&copy;Urban Vape</p>
+        <p>Hubungi kami di <a href="https://www.instagram.com/urban_vape/" style="color: #fff; text-decoration: none;">info@UrbanVape.instagram</a></p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 2000); // Change image every 3 seconds
+        }
+    </script>
+
+</body>
+</html>
